@@ -1,0 +1,188 @@
+:root {
+  --bg: #0f1720;
+  --bg-panel: #18232e;
+  --bg-raised: #223140;
+  --hairline: rgba(232, 238, 242, 0.1);
+  --ink: #e8eef2;
+  --ink-dim: #8a9aa6;
+  --amber: #f5a524;
+  --teal: #4fb3a5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.screen {
+  min-height: 100vh;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  padding-block: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-bottom));
+}
+
+/* Home */
+.home {
+  justify-content: center;
+  gap: 16px;
+}
+
+.home-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.home-subtitle {
+  text-align: center;
+  color: var(--ink-dim);
+  margin-bottom: 16px;
+}
+
+.home-button {
+  background: var(--bg-panel);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  font-size: 1.15rem;
+  padding: 24px;
+  text-align: center;
+}
+
+.home-button:active:not(:disabled) {
+  background: var(--bg-raised);
+}
+
+.home-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Study */
+.study {
+  gap: 16px;
+}
+
+.study-position {
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+}
+
+.study-actions {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.study-hint {
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.study-button {
+  width: 100%;
+  background: var(--amber);
+  border: none;
+  border-radius: 14px;
+  color: #1a1206;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 16px;
+}
+
+/* Flip card */
+.flip-card {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  perspective: 1200px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Both faces share one grid cell, so the card is as tall as the longer face
+   and a long note on the back can never be clipped. */
+.flip-inner {
+  flex: 1;
+  display: grid;
+  transform-style: preserve-3d;
+  transition: transform 0.45s ease;
+}
+
+.flip-inner-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 28px 20px;
+  background: var(--bg-panel);
+  border: 1px solid var(--hairline);
+  border-radius: 20px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-face-back {
+  transform: rotateY(180deg);
+  border-color: rgba(79, 179, 165, 0.45);
+}
+
+.flip-headline {
+  font-size: 1.7rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.flip-sentence {
+  color: var(--ink);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.flip-sentence mark {
+  background: none;
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.flip-face-back .flip-sentence mark {
+  color: var(--teal);
+}
+
+.flip-note {
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner {
+    transition: none;
+  }
+}
