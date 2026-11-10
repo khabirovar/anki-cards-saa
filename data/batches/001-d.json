@@ -1,0 +1,502 @@
+[
+  {
+    "id": 161,
+    "word": "jitter",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "джиттер, колебания задержки",
+    "sentenceEn": "The voice application suffers from *jitter* on the public internet, so the company routes calls through Global Accelerator.",
+    "sentenceRu": "Голосовое приложение страдает от *джиттера* в публичном интернете, поэтому компания направляет звонки через Global Accelerator.",
+    "noteRu": null
+  },
+  {
+    "id": 162,
+    "word": "health check",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "проверка работоспособности, хелсчек",
+    "sentenceEn": "When the Route 53 *health check* for the primary site fails, DNS answers point users to the backup Region.",
+    "sentenceRu": "Когда *проверка работоспособности* Route 53 для основного сайта не проходит, DNS начинает направлять пользователей в резервный регион.",
+    "noteRu": "Регулярная проверка доступности ресурса (балансировщиком, Route 53, Auto Scaling). По её результату трафик уводится с неисправных целей или запускается переключение."
+  },
+  {
+    "id": 163,
+    "word": "migrate",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "мигрировать, переносить",
+    "sentenceEn": "The company plans to *migrate* its on-premises Oracle database to Amazon RDS with minimal downtime.",
+    "sentenceRu": "Компания планирует *перенести* свою локальную базу Oracle в Amazon RDS с минимальным простоем.",
+    "noteRu": null
+  },
+  {
+    "id": 164,
+    "word": "reprocess",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "повторно обрабатывать, перепроцессить",
+    "sentenceEn": "Longer stream retention lets the team *reprocess* records after a bug in the consumer corrupted the results.",
+    "sentenceRu": "Увеличенное хранение в потоке позволяет команде *повторно обработать* записи после того, как ошибка в потребителе испортила результаты.",
+    "noteRu": null
+  },
+  {
+    "id": 165,
+    "word": "cryptographic",
+    "pos": "adj",
+    "kind": "general",
+    "translationRu": "криптографический",
+    "sentenceEn": "The company must keep its *cryptographic* keys in dedicated hardware that only it controls, so it chooses CloudHSM.",
+    "sentenceRu": "Компания должна хранить свои *криптографические* ключи на выделенном оборудовании под собственным контролем, поэтому выбирает CloudHSM.",
+    "noteRu": null
+  },
+  {
+    "id": 166,
+    "word": "target group",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "целевая группа",
+    "sentenceEn": "Requests with the path /api are routed to one *target group*, and all other requests go to another.",
+    "sentenceRu": "Запросы с путём /api направляются в одну *целевую группу*, а все остальные — в другую.",
+    "noteRu": "Набор целей (инстансы, IP, Lambda), куда ALB или NLB отправляет трафик по правилам маршрутизации. Health check настраивается на уровне целевой группы."
+  },
+  {
+    "id": 167,
+    "word": "replicate",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "реплицировать, копировать",
+    "sentenceEn": "To protect against a regional outage, the architect must *replicate* objects to a bucket in another Region.",
+    "sentenceRu": "Чтобы защититься от регионального сбоя, архитектору нужно *реплицировать* объекты в бакет в другом регионе.",
+    "noteRu": null
+  },
+  {
+    "id": 168,
+    "word": "backfill",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "дозаполнять (исторические данные), бэкфиллить",
+    "sentenceEn": "After adding the new search index, the team must *backfill* it with records that already exist in S3.",
+    "sentenceRu": "После добавления нового поискового индекса команде нужно *дозаполнить* его записями, которые уже лежат в S3.",
+    "noteRu": "Догрузить уже существующие или пропущенные данные в новую систему или индекс задним числом."
+  },
+  {
+    "id": 169,
+    "word": "sticky session",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "липкая сессия, привязка сессии",
+    "sentenceEn": "The legacy app keeps login state in server memory, so the team enables *sticky sessions* on the load balancer.",
+    "sentenceRu": "Старое приложение хранит состояние входа в памяти сервера, поэтому команда включает *липкие сессии* на балансировщике.",
+    "noteRu": "Балансировщик с помощью cookie отправляет запросы одного клиента на один и тот же сервер. Временное решение; лучше вынести сессии в ElastiCache или DynamoDB."
+  },
+  {
+    "id": 170,
+    "word": "cache",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "кэш",
+    "sentenceEn": "Adding an in-memory *cache* in front of the database cuts read latency for the most popular product pages.",
+    "sentenceRu": "*Кэш* в памяти перед базой данных снижает задержку чтения самых популярных страниц товаров.",
+    "noteRu": null
+  },
+  {
+    "id": 171,
+    "word": "billable",
+    "pos": "adj",
+    "kind": "general",
+    "translationRu": "оплачиваемый, тарифицируемый",
+    "sentenceEn": "Some S3 storage classes have a minimum *billable* object size, so storing many tiny files there costs more than expected.",
+    "sentenceRu": "У некоторых классов хранения S3 есть минимальный *тарифицируемый* размер объекта, поэтому хранить там много мелких файлов дороже, чем кажется.",
+    "noteRu": null
+  },
+  {
+    "id": 172,
+    "word": "operationalize",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "внедрить в эксплуатацию, ввести в рабочий процесс",
+    "sentenceEn": "The security team wants to *operationalize* the PCI DSS standard by enabling automated checks in Security Hub.",
+    "sentenceRu": "Команда безопасности хочет *внедрить* стандарт PCI DSS в повседневную работу, включив автоматические проверки в Security Hub.",
+    "noteRu": null
+  },
+  {
+    "id": 173,
+    "word": "cross-zone load balancing",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "межзональная балансировка нагрузки",
+    "sentenceEn": "One zone has fewer instances than the other, so enable *cross-zone load balancing* to spread traffic evenly across all targets.",
+    "sentenceRu": "В одной зоне инстансов меньше, чем в другой, поэтому включите *межзональную балансировку*, чтобы трафик равномерно шёл на все цели.",
+    "noteRu": "Каждый узел балансировщика распределяет трафик по целям во всех AZ, а не только в своей. В ALB включена по умолчанию (можно отключить на уровне целевой группы), в NLB по умолчанию выключена."
+  },
+  {
+    "id": 174,
+    "word": "compaction",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "компактизация, уплотнение (данных)",
+    "sentenceEn": "Automatic *compaction* merges many small files into larger ones, which makes analytics queries faster and cheaper.",
+    "sentenceRu": "Автоматическая *компактизация* объединяет множество мелких файлов в крупные, и аналитические запросы становятся быстрее и дешевле.",
+    "noteRu": null
+  },
+  {
+    "id": 175,
+    "word": "embed",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "встраивать, вшивать",
+    "sentenceEn": "Developers *embedded* access keys in the source code, so the architect replaces them with an IAM role.",
+    "sentenceRu": "Разработчики *вшили* ключи доступа в исходный код, поэтому архитектор заменяет их IAM-ролью.",
+    "noteRu": null
+  },
+  {
+    "id": 176,
+    "word": "single point of failure",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "единая точка отказа, SPOF",
+    "sentenceEn": "If the database runs on only one EC2 instance, that instance becomes a *single point of failure* for the application.",
+    "sentenceRu": "Если база данных работает всего на одном инстансе EC2, этот инстанс становится *единой точкой отказа* для приложения.",
+    "noteRu": "Компонент, отказ которого останавливает всю систему. На экзамене его устраняют дублированием: несколько AZ, Multi-AZ, второй канал связи."
+  },
+  {
+    "id": 177,
+    "word": "deployment",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "развёртывание, деплой",
+    "sentenceEn": "A blue/green *deployment* lets the team switch traffic to the new version and quickly switch back if problems appear.",
+    "sentenceRu": "Сине-зелёное *развёртывание* позволяет команде переключить трафик на новую версию и быстро вернуть его при проблемах.",
+    "noteRu": null
+  },
+  {
+    "id": 178,
+    "word": "telemetry",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "телеметрия",
+    "sentenceEn": "The team sends metrics, logs, and traces to CloudWatch so that all *telemetry* is available in one place.",
+    "sentenceRu": "Команда отправляет метрики, логи и трассировки в CloudWatch, чтобы вся *телеметрия* была в одном месте.",
+    "noteRu": null
+  },
+  {
+    "id": 179,
+    "word": "integrate",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "интегрировать, связывать",
+    "sentenceEn": "The company wants to *integrate* its existing Okta directory with AWS so employees use single sign-on.",
+    "sentenceRu": "Компания хочет *интегрировать* свой каталог Okta с AWS, чтобы сотрудники входили через единый вход.",
+    "noteRu": null
+  },
+  {
+    "id": 180,
+    "word": "loosely coupled",
+    "pos": "adj",
+    "kind": "term",
+    "translationRu": "слабосвязанный",
+    "sentenceEn": "To let each component fail or scale on its own, design a *loosely coupled* architecture with queues between services.",
+    "sentenceRu": "Чтобы каждый компонент мог отказывать и масштабироваться сам по себе, спроектируйте *слабосвязанную* архитектуру с очередями между сервисами.",
+    "noteRu": "Компоненты мало знают друг о друге и общаются через очереди, события или API. Сбой или нагрузка в одном не валит остальные; инструменты — SQS, SNS, EventBridge."
+  },
+  {
+    "id": 181,
+    "word": "configurable",
+    "pos": "adj",
+    "kind": "general",
+    "translationRu": "настраиваемый",
+    "sentenceEn": "Each log group has a *configurable* retention period, so old logs can be deleted automatically to save money.",
+    "sentenceRu": "У каждой группы логов *настраиваемый* срок хранения, поэтому старые логи можно удалять автоматически ради экономии.",
+    "noteRu": null
+  },
+  {
+    "id": 182,
+    "word": "resize",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "изменять размер, ресайзить",
+    "sentenceEn": "The data warehouse needs more power during quarter-end, so the team *resizes* the Redshift cluster by adding nodes.",
+    "sentenceRu": "Хранилищу данных нужно больше мощности в конце квартала, поэтому команда *меняет размер* кластера Redshift, добавляя узлы.",
+    "noteRu": null
+  },
+  {
+    "id": 183,
+    "word": "tight coupling",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "сильная связанность, жёсткая связь",
+    "sentenceEn": "Sharing one database between all services creates *tight coupling*, so a schema change can break several teams at once.",
+    "sentenceRu": "Общая база данных для всех сервисов создаёт *сильную связанность*: одно изменение схемы может сломать работу сразу нескольких команд.",
+    "noteRu": "Компоненты напрямую зависят друг от друга, и сбой или медленная работа одного сразу бьёт по другим. На экзамене это проблема, которую решают очередями и событиями."
+  },
+  {
+    "id": 184,
+    "word": "billing",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "биллинг, выставление счетов",
+    "sentenceEn": "AWS Organizations provides consolidated *billing*, so the company receives one invoice for all its accounts.",
+    "sentenceRu": "AWS Organizations даёт консолидированный *биллинг*, поэтому компания получает один счёт за все свои аккаунты.",
+    "noteRu": null
+  },
+  {
+    "id": 185,
+    "word": "orchestrate",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "оркестрировать, координировать",
+    "sentenceEn": "The team uses Step Functions to *orchestrate* several Lambda functions that validate, charge, and ship each order.",
+    "sentenceRu": "Команда использует Step Functions, чтобы *оркестрировать* несколько функций Lambda, которые проверяют, оплачивают и отправляют каждый заказ.",
+    "noteRu": null
+  },
+  {
+    "id": 186,
+    "word": "plaintext",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "открытый текст, незашифрованные данные",
+    "sentenceEn": "Database passwords must never be stored as *plaintext* in configuration files or environment variables.",
+    "sentenceRu": "Пароли от базы данных никогда нельзя хранить *открытым текстом* в конфигурационных файлах или переменных окружения.",
+    "noteRu": null
+  },
+  {
+    "id": 187,
+    "word": "low latency",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "низкая задержка",
+    "sentenceEn": "The global news site needs *low latency* for readers on every continent, so it caches pages at the edge.",
+    "sentenceRu": "Глобальному новостному сайту нужна *низкая задержка* для читателей на всех континентах, поэтому он кэширует страницы на периферии.",
+    "noteRu": "Минимальное время отклика. На экзамене подсказывает ответы вроде CloudFront, Global Accelerator, ElastiCache, кластерных групп размещения или размещения ближе к пользователю."
+  },
+  {
+    "id": 188,
+    "word": "queue",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "очередь",
+    "sentenceEn": "Orders are placed in an SQS *queue* so that workers can process them even if traffic suddenly spikes.",
+    "sentenceRu": "Заказы помещаются в *очередь* SQS, чтобы обработчики справлялись с ними даже при резком всплеске трафика.",
+    "noteRu": null
+  },
+  {
+    "id": 189,
+    "word": "synchronize",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "синхронизировать",
+    "sentenceEn": "IAM Identity Center can *synchronize* users and groups from the corporate identity provider through SCIM.",
+    "sentenceRu": "IAM Identity Center может *синхронизировать* пользователей и группы из корпоративного провайдера удостоверений по протоколу SCIM.",
+    "noteRu": null
+  },
+  {
+    "id": 190,
+    "word": "high throughput",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "высокая пропускная способность",
+    "sentenceEn": "The video analytics job reads large files in sequence and needs *high throughput* rather than many small random reads.",
+    "sentenceRu": "Задача видеоаналитики последовательно читает большие файлы, и ей нужна *высокая пропускная способность*, а не много мелких случайных чтений.",
+    "noteRu": "Большой объём данных в единицу времени (МБ/с). Не путать с IOPS — числом операций; для потоковых чтений подходят, например, тома EBS st1."
+  },
+  {
+    "id": 191,
+    "word": "decryption",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "расшифровка, дешифрование",
+    "sentenceEn": "With SSE-C, Amazon S3 handles encryption and *decryption*, but the customer supplies and keeps the keys.",
+    "sentenceRu": "При SSE-C Amazon S3 выполняет шифрование и *расшифровку*, но ключи предоставляет и хранит сам клиент.",
+    "noteRu": null
+  },
+  {
+    "id": 192,
+    "word": "unify",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "объединять, унифицировать",
+    "sentenceEn": "Security Hub *unifies* findings from GuardDuty, Inspector, and Macie into a single view for the security team.",
+    "sentenceRu": "Security Hub *объединяет* находки GuardDuty, Inspector и Macie в единое представление для команды безопасности.",
+    "noteRu": null
+  },
+  {
+    "id": 193,
+    "word": "orchestration",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "оркестрация",
+    "sentenceEn": "The company already uses Kubernetes for container *orchestration*, so Amazon EKS is the natural choice on AWS.",
+    "sentenceRu": "Компания уже использует Kubernetes для *оркестрации* контейнеров, поэтому Amazon EKS — естественный выбор в AWS.",
+    "noteRu": null
+  },
+  {
+    "id": 194,
+    "word": "network bandwidth",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "пропускная способность сети, ширина канала",
+    "sentenceEn": "To avoid saturating the office link, the team limits the *network bandwidth* that DataSync may use during business hours.",
+    "sentenceRu": "Чтобы не забить канал офиса, команда ограничивает *пропускную способность сети*, которую DataSync может использовать в рабочие часы.",
+    "noteRu": "Максимальный объём данных, который можно передать по сети за единицу времени. Зависит от типа инстанса EC2; если канала мало для переноса, рассматривают Snowball или Direct Connect."
+  },
+  {
+    "id": 195,
+    "word": "dependency",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "зависимость",
+    "sentenceEn": "X-Ray draws a service map that shows each *dependency* the application calls and where the latency comes from.",
+    "sentenceRu": "X-Ray строит карту сервисов, на которой видна каждая *зависимость*, вызываемая приложением, и источник задержки.",
+    "noteRu": null
+  },
+  {
+    "id": 196,
+    "word": "debug",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "отлаживать, дебажить",
+    "sentenceEn": "Developers use AWS X-Ray to trace requests and *debug* slow calls across a distributed application.",
+    "sentenceRu": "Разработчики используют AWS X-Ray, чтобы трассировать запросы и *отлаживать* медленные вызовы в распределённом приложении.",
+    "noteRu": null
+  },
+  {
+    "id": 197,
+    "word": "data center",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "дата-центр, центр обработки данных, ЦОД",
+    "sentenceEn": "The company needs a dedicated private connection between its *data center* and AWS, so it orders Direct Connect.",
+    "sentenceRu": "Компании нужно выделенное частное соединение между её *дата-центром* и AWS, поэтому она заказывает Direct Connect.",
+    "noteRu": "В вопросах обычно означает локальную инфраструктуру клиента (on-premises), которую соединяют с AWS через VPN или Direct Connect или переносят в облако."
+  },
+  {
+    "id": 198,
+    "word": "proactively",
+    "pos": "adv",
+    "kind": "general",
+    "translationRu": "проактивно, заранее",
+    "sentenceEn": "Monitoring service quotas helps the team *proactively* request increases before a launch fails.",
+    "sentenceRu": "Мониторинг квот сервисов помогает команде *заранее* запрашивать их увеличение, пока запуск не сорвался.",
+    "noteRu": null
+  },
+  {
+    "id": 199,
+    "word": "replica",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "реплика, копия",
+    "sentenceEn": "If the primary database fails, RDS promotes the standby *replica* in another Availability Zone automatically.",
+    "sentenceRu": "Если основная база отказывает, RDS автоматически повышает резервную *реплику* в другой зоне доступности до основной.",
+    "noteRu": null
+  },
+  {
+    "id": 200,
+    "word": "ciphertext",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "шифротекст, зашифрованные данные",
+    "sentenceEn": "The application encrypts the API key with KMS and stores only the *ciphertext* in its environment variables.",
+    "sentenceRu": "Приложение шифрует API-ключ через KMS и хранит в переменных окружения только *шифротекст*.",
+    "noteRu": null
+  },
+  {
+    "id": 201,
+    "word": "edge location",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "периферийная точка присутствия, edge-локация",
+    "sentenceEn": "CloudFront serves cached images from the *edge location* closest to each user, which reduces load times.",
+    "sentenceRu": "CloudFront отдаёт закэшированные изображения из ближайшей к пользователю *edge-локации*, сокращая время загрузки.",
+    "noteRu": "Точка присутствия AWS вне регионов, используемая CloudFront, Route 53, Global Accelerator и S3 Transfer Acceleration для приближения к пользователям."
+  },
+  {
+    "id": 202,
+    "word": "generative",
+    "pos": "adj",
+    "kind": "general",
+    "translationRu": "генеративный",
+    "sentenceEn": "The startup wants to add a *generative* AI chatbot without managing models, so it chooses Amazon Bedrock.",
+    "sentenceRu": "Стартап хочет добавить чат-бот на *генеративном* ИИ без управления моделями, поэтому выбирает Amazon Bedrock.",
+    "noteRu": null
+  },
+  {
+    "id": 203,
+    "word": "prescriptive",
+    "pos": "adj",
+    "kind": "general",
+    "translationRu": "предписывающий, с конкретными рекомендациями",
+    "sentenceEn": "AWS Control Tower gives *prescriptive* guidance for setting up a secure multi-account environment.",
+    "sentenceRu": "AWS Control Tower даёт *конкретные* рекомендации по созданию безопасной мультиаккаунтной среды.",
+    "noteRu": null
+  },
+  {
+    "id": 204,
+    "word": "global infrastructure",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "глобальная инфраструктура",
+    "sentenceEn": "By using the AWS *global infrastructure*, the startup can launch its app in Europe and Asia within a day.",
+    "sentenceRu": "Используя *глобальную инфраструктуру* AWS, стартап может запустить приложение в Европе и Азии за один день.",
+    "noteRu": "Регионы, зоны доступности, локальные зоны и точки присутствия AWS по всему миру. Позволяет размещать ресурсы ближе к пользователям и строить DR между регионами."
+  },
+  {
+    "id": 205,
+    "word": "availability",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "доступность",
+    "sentenceEn": "Adding a second NAT gateway in another zone improves *availability* for outbound traffic from private subnets.",
+    "sentenceRu": "Второй NAT-шлюз в другой зоне повышает *доступность* исходящего трафика из приватных подсетей.",
+    "noteRu": null
+  },
+  {
+    "id": 206,
+    "word": "customize",
+    "pos": "verb",
+    "kind": "general",
+    "translationRu": "настраивать под себя, кастомизировать",
+    "sentenceEn": "Use a custom DB parameter group to *customize* database engine settings, because the default group cannot be changed.",
+    "sentenceRu": "Используйте собственную группу параметров, чтобы *настроить под себя* параметры движка базы, потому что группу по умолчанию изменить нельзя.",
+    "noteRu": null
+  },
+  {
+    "id": 207,
+    "word": "egress",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "исходящий трафик, эгресс",
+    "sentenceEn": "IPv6 instances need internet *egress* but must not accept inbound connections, so use an egress-only internet gateway.",
+    "sentenceRu": "Инстансам с IPv6 нужен *исходящий трафик* в интернет без входящих соединений, поэтому используйте egress-only internet gateway.",
+    "noteRu": "В AWS — трафик, выходящий из VPC или из AWS; за него обычно берётся плата, в отличие от входящего (ingress)."
+  },
+  {
+    "id": 208,
+    "word": "content delivery network",
+    "pos": "noun",
+    "kind": "term",
+    "translationRu": "сеть доставки контента, CDN",
+    "sentenceEn": "To speed up downloads for users worldwide, put the static assets behind a *content delivery network* such as CloudFront.",
+    "sentenceRu": "Чтобы ускорить загрузку для пользователей по всему миру, раздавайте статические файлы через *сеть доставки контента*, например CloudFront.",
+    "noteRu": "Сеть серверов, кэширующих контент рядом с пользователями. В AWS это Amazon CloudFront; снижает задержку и нагрузку на источник."
+  },
+  {
+    "id": 209,
+    "word": "ingestion",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "приём (загрузка) данных, инджест",
+    "sentenceEn": "Kinesis Data Firehose handles the *ingestion* of clickstream events and delivers them to S3 without servers.",
+    "sentenceRu": "Kinesis Data Firehose отвечает за *приём* событий кликов и доставляет их в S3 без серверов.",
+    "noteRu": null
+  },
+  {
+    "id": 210,
+    "word": "uptime",
+    "pos": "noun",
+    "kind": "general",
+    "translationRu": "время безотказной работы, аптайм",
+    "sentenceEn": "The business requires 99.99 percent *uptime*, so the architect designs the system across several Availability Zones.",
+    "sentenceRu": "Бизнес требует 99,99 процента *аптайма*, поэтому архитектор проектирует систему на несколько зон доступности.",
+    "noteRu": null
+  }
+]

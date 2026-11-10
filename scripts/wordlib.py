@@ -144,3 +144,69 @@ def keyness(count: int, total: int, zipf: float) -> float:
     corpus_share = count / total
     english_share = 10 ** max(zipf, MIN_ZIPF) / 1e9
     return math.log10(corpus_share / english_share)
+
+
+# Context sentences shorter than this are headings or fragments; longer ones
+# are run-on table rows from PDF extraction.
+MIN_CONTEXT_WORDS = 8
+MAX_CONTEXT_WORDS = 40
+_PARAGRAPH_BREAK = re.compile(r"\n\s*\n")
+_SENTENCE_END = re.compile(r"(?<=[.!?])\s+")
+
+
+def split_sentences(text: str) -> list[str]:
+    """Sentences of a document; single line breaks are PDF/HTML wrapping, blank lines end a paragraph."""
+    sentences = []
+    for paragraph in _PARAGRAPH_BREAK.split(unicodedata.normalize("NFKC", text)):
+        joined = " ".join(paragraph.split())
+        sentences += [s for s in _SENTENCE_END.split(joined) if s]
+    return sentences
+
+
+def _matcher(word: str, lemmatize: Callable[[str], str]) -> Callable[[str], bool]:
+    target = word.lower()
+    if " " in target:
+        # Terms: the phrase itself, any case, with an optional plural ending.
+        pattern = re.compile(r"\b" + r"\s+".join(map(re.escape, target.split())) + r"(?:s|es)?\b", re.IGNORECASE)
+        return lambda sentence: bool(pattern.search(sentence))
+    return lambda sentence: any(t.lower() == target or lemmatize(t.lower()) == target for t in tokenize(sentence))
+
+
+def find_contexts(sentences: list[tuple[str, str]], word: str, lemmatize: Callable[[str], str], limit: int = 3) -> list[tuple[str, str]]:
+    """Up to `limit` (document, sentence) pairs using `word`, spread over different documents."""
+    matches = _matcher(word, lemmatize)
+    found = [
+        (doc, sentence)
+        for doc, sentence in sentences
+        if MIN_CONTEXT_WORDS <= len(sentence.split()) <= MAX_CONTEXT_WORDS and matches(sentence)
+    ]
+    # Mid-length sentences carry enough context without being run-ons.
+    found.sort(key=lambda pair: abs(len(pair[1].split()) - 20))
+    picked: list[tuple[str, str]] = []
+    for pair in found:
+        if len(picked) < limit and pair[0] not in {doc for doc, _ in picked}:
+            picked.append(pair)
+    for pair in found:
+        if len(picked) < limit and pair not in picked:
+            picked.append(pair)
+    return picked
+
+
+def longest_shared_run(sentence: str, source: str) -> int:
+    """Length in words of the longest word sequence `sentence` shares with `source`.
+
+    Used to check that card sentences are written anew rather than copied
+    from AWS texts.
+    """
+    a = [t.lower() for t in tokenize(sentence)]
+    b = [t.lower() for t in tokenize(source)]
+    best = 0
+    previous = [0] * (len(b) + 1)
+    for i in range(1, len(a) + 1):
+        current = [0] * (len(b) + 1)
+        for j in range(1, len(b) + 1):
+            if a[i - 1] == b[j - 1]:
+                current[j] = previous[j - 1] + 1
+                best = max(best, current[j])
+        previous = current
+    return best
