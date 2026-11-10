@@ -1,6 +1,6 @@
 import unittest
 
-from wordlib import count_bigrams, count_words, drop_boilerplate, html_to_text, tokenize
+from wordlib import count_bigrams, count_words, drop_boilerplate, html_to_text, keyness, tokenize
 
 
 def lemma(word: str) -> str:
@@ -41,6 +41,11 @@ class TokenizeTest(unittest.TestCase):
         )
 
 
+    def test_reads_typographic_ligatures_as_plain_letters(self):
+        # PDFs write "fi", "ff" and "fl" as single ligature characters
+        self.assertEqual(tokenize("con\ufb01gure the speci\ufb01c di\ufb00erent work\ufb02ow"), ["configure", "the", "specific", "different", "workflow"])
+
+
 class CountWordsTest(unittest.TestCase):
     def test_counts_occurrences_documents_and_capitalisation_per_lemma(self):
         docs = {"a": "Read replicas help. replicas scale", "b": "One replica. Lambda runs code", "c": "Lambda again"}
@@ -71,6 +76,21 @@ class CountBigramsTest(unittest.TestCase):
     def test_does_not_pair_words_across_sentence_breaks(self):
         rows = count_bigrams({"a": "store data. bucket names"}, lemma, stopwords=set())
         self.assertNotIn("data bucket", rows)
+
+
+class KeynessTest(unittest.TestCase):
+    def test_ranks_words_common_in_the_corpus_but_rare_in_english_higher(self):
+        # same corpus count: the rarer word in everyday English is more AWS-specific
+        self.assertGreater(keyness(100, 1_000_000, 2.9), keyness(100, 1_000_000, 4.7))
+        # same English frequency: the word used more in the corpus is more specific
+        self.assertGreater(keyness(500, 1_000_000, 3.5), keyness(50, 1_000_000, 3.5))
+
+    def test_is_zero_when_corpus_and_english_frequencies_match(self):
+        # zipf 6 = 1000 per million words
+        self.assertAlmostEqual(keyness(1000, 1_000_000, 6.0), 0.0)
+
+    def test_does_not_explode_for_words_unknown_to_the_frequency_list(self):
+        self.assertEqual(keyness(10, 1_000_000, 0.0), keyness(10, 1_000_000, 1.0))
 
 
 if __name__ == "__main__":

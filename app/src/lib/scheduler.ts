@@ -1,8 +1,12 @@
 import { getBox, setBox } from "./progress";
 
 // Leitner boxes: 0 is a new card, 1..4 are being learned, 5 is learned.
+// HIDDEN_BOX marks a card the user found too easy: it is never shown again.
 export const MAX_BOX = 5;
 export const SESSION_SIZE = 20;
+export const HIDDEN_BOX = 9;
+
+export type Answer = "unknown" | "known" | "easy";
 
 export interface SessionState {
   queue: number[];
@@ -21,7 +25,7 @@ export interface DeckSummary {
 
 // Box b is reviewed every 2^(b-1) sessions, so no per-card dates are stored.
 export function isDue(box: number, session: number): boolean {
-  return box >= 1 && session % 2 ** (box - 1) === 0;
+  return box >= 1 && box <= MAX_BOX && session % 2 ** (box - 1) === 0;
 }
 
 function shuffle<T>(items: T[], random: () => number): T[] {
@@ -41,7 +45,7 @@ export function buildSession(
   random: () => number = Math.random,
 ): number[] {
   const byWeakest = (a: number, b: number) => getBox(boxes, a) - getBox(boxes, b) || a - b;
-  const studied = ids.filter((id) => getBox(boxes, id) > 0);
+  const studied = ids.filter((id) => getBox(boxes, id) > 0 && getBox(boxes, id) !== HIDDEN_BOX);
   const due = studied.filter((id) => isDue(getBox(boxes, id), session)).sort(byWeakest);
   const fresh = ids.filter((id) => getBox(boxes, id) === 0);
   let picked = [...due, ...fresh].slice(0, size);
@@ -57,10 +61,16 @@ export function startSession(queue: number[]): SessionState {
   return { queue, failed: [], knownFirstTry: 0, total: queue.length };
 }
 
-export function answerCard(state: SessionState, boxes: string, known: boolean): { state: SessionState; boxes: string } {
+export function answerCard(state: SessionState, boxes: string, answer: Answer): { state: SessionState; boxes: string } {
   const [id, ...rest] = state.queue;
   const firstAnswer = !state.failed.includes(id);
-  if (known) {
+  if (answer === "easy") {
+    return {
+      state: { ...state, queue: rest, knownFirstTry: state.knownFirstTry + (firstAnswer ? 1 : 0) },
+      boxes: setBox(boxes, id, HIDDEN_BOX),
+    };
+  }
+  if (answer === "known") {
     return {
       state: { ...state, queue: rest, knownFirstTry: state.knownFirstTry + (firstAnswer ? 1 : 0) },
       // A new card starts in box 1, so knowing it moves it to box 2 — above
@@ -79,7 +89,7 @@ export function summarize(ids: number[], boxes: string): DeckSummary {
   for (const id of ids) {
     const box = getBox(boxes, id);
     if (box === 0) summary.fresh++;
-    else if (box === MAX_BOX) summary.learned++;
+    else if (box === MAX_BOX || box === HIDDEN_BOX) summary.learned++;
     else summary.learning++;
   }
   return summary;

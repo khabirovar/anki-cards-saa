@@ -22,8 +22,6 @@ SEED_JSON = ROOT / "data" / "batches" / "000-seed.json"
 WORDLIST_CSV = ROOT / "data" / "wordlist.csv"
 
 TARGET = 1000
-# Words seen in fewer documents are mostly noise from a single page.
-MIN_DOCS = 5
 
 
 def read_csv(path: Path) -> list[dict]:
@@ -33,7 +31,11 @@ def read_csv(path: Path) -> list[dict]:
 
 def main() -> None:
     curation = json.loads(CURATION_JSON.read_text(encoding="utf-8"))
-    candidates = [row for row in read_csv(WORDS_CSV) if int(row["docs"]) >= MIN_DOCS]
+    candidates = [
+        row
+        for row in read_csv(WORDS_CSV)
+        if int(row["docs"]) >= curation["min_docs"] and float(row["zipf"]) <= curation["max_zipf"]
+    ]
     docs = {row["lemma"]: row["docs"] for row in candidates}
     docs.update({row["term"].lower(): row["docs"] for row in read_csv(TERMS_CSV)})
     fixed = [{"id": c["id"], "word": c["word"], "kind": c["kind"]} for c in json.loads(SEED_JSON.read_text(encoding="utf-8"))]

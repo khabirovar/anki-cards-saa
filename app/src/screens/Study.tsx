@@ -2,7 +2,7 @@ import { useEffect, useState } from "preact/hooks";
 import type { Card, StudyMode } from "../types/card";
 import { getFaces } from "../lib/cardFace";
 import { flipHaptic } from "../lib/haptics";
-import { answerCard, startSession } from "../lib/scheduler";
+import { answerCard, startSession, type Answer } from "../lib/scheduler";
 import { FlipCard } from "../components/FlipCard";
 
 interface StudyProps {
@@ -33,8 +33,8 @@ export function Study({ cardsById, mode, queue, boxes, onAnswer, onFinish, onRes
     flipHaptic();
   }
 
-  function handleAnswer(known: boolean) {
-    const result = answerCard(session, boxes, known);
+  function handleAnswer(answer: Answer) {
+    const result = answerCard(session, boxes, answer);
     setSession(result.state);
     onAnswer(result.boxes);
     setFlipped(false);
@@ -70,10 +70,10 @@ export function Study({ cardsById, mode, queue, boxes, onAnswer, onFinish, onRes
       <div class="study-actions">
         {flipped ? (
           <>
-            <button class="study-button study-button-unknown" onClick={() => handleAnswer(false)}>
+            <button class="study-button study-button-unknown" onClick={() => handleAnswer("unknown")}>
               Не знаю
             </button>
-            <button class="study-button study-button-known" onClick={() => handleAnswer(true)}>
+            <button class="study-button study-button-known" onClick={() => handleAnswer("known")}>
               Знаю
             </button>
           </>
@@ -81,6 +81,9 @@ export function Study({ cardsById, mode, queue, boxes, onAnswer, onFinish, onRes
           <div class="study-hint">Нажми на карточку, чтобы перевернуть</div>
         )}
       </div>
+      <button class="study-easy" onClick={() => handleAnswer("easy")}>
+        Слишком легко — больше не показывать
+      </button>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 """Pure helpers for turning source documents into vocabulary candidates."""
+import math
 import re
+import unicodedata
 from collections import defaultdict
 from collections.abc import Callable
 from html.parser import HTMLParser
@@ -67,7 +69,9 @@ def drop_boilerplate(docs: dict[str, str], min_docs: int) -> dict[str, str]:
 
 
 def tokenize(text: str) -> list[str]:
-    return _TOKEN.findall(text)
+    # NFKC turns PDF ligatures ("ﬁ" in "conﬁgure") into plain letters; left
+    # alone they split words into fragments like "con" + "gure".
+    return _TOKEN.findall(unicodedata.normalize("NFKC", text))
 
 
 def _sentences(text: str) -> list[list[str]]:
@@ -124,3 +128,19 @@ def count_bigrams(docs: dict[str, str], lemmatize: Callable[[str], str], stopwor
                     row["count"] += 1
                     row["docs"].add(name)
     return {key: {"count": row["count"], "docs": len(row["docs"])} for key, row in stats.items()}
+
+
+# Words missing from the frequency list get zipf 0; treat them as merely rare
+# instead of infinitely rare, or every typo and PDF fragment would rank first.
+MIN_ZIPF = 1.0
+
+
+def keyness(count: int, total: int, zipf: float) -> float:
+    """How many times (log10) more often a word appears in the corpus than in English at large.
+
+    Zipf is log10 of occurrences per billion words, so 10**zipf / 1e9 is the
+    word's share of everyday English.
+    """
+    corpus_share = count / total
+    english_share = 10 ** max(zipf, MIN_ZIPF) / 1e9
+    return math.log10(corpus_share / english_share)

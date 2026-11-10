@@ -9,993 +9,993 @@ id,word,kind,docs
 8,read replica,term,7
 9,bucket policy,term,9
 10,availability zone,term,8
-11,automatically,general,72
-12,resource,general,71
+11,unauthorized,general,
+12,rightsize,general,7
 13,high availability,term,33
-14,require,general,70
-15,enable,general,68
+14,runbook,general,4
+15,observability,general,13
 16,fault tolerance,term,13
-17,availability,general,68
-18,default,general,67
-19,monitor,general,66
+17,overprovision,general,9
+18,containerized,general,
+19,predefined,general,
 20,disaster recovery,term,14
-21,configuration,general,65
-22,configure,general,64
+21,unencrypted,general,
+22,prebuilt,general,
 23,security group,term,32
-24,associate,general,64
-25,maintain,general,64
-26,capability,general,63
+24,underutilize,general,8
+25,misconfiguration,general,5
+26,preconfigured,general,
 27,load balancer,term,15
-28,custom,general,63
-29,perform,general,62
+28,authorizer,general,4
+29,misconfigure,general,6
 30,use case,term,56
-31,specify,general,62
-32,integrate,general,62
-33,log,general,61
+31,queryable,general,4
+32,federate,general,10
+33,endpoint,general,52
 34,fully managed,term,
-35,secure,general,61
-36,recommend,general,61
+35,configure,general,66
+36,workload,general,58
 37,data transfer,term,31
-38,instance,general,60
-39,reduce,general,60
-40,limit,general,60
+38,subnet,general,28
+39,allowlist,general,4
+40,encrypt,general,45
 41,access control,term,40
-42,interface,general,60
-43,define,general,60
+42,automate,general,56
+43,credential,general,32
 44,managed service,term,30
-45,storage,general,59
-46,infrastructure,general,59
-47,workload,general,58
+45,hardcode,general,6
+46,prorate,general,12
+47,redundantly,general,5
 48,highly available,term,27
-49,ensure,general,58
-50,requirement,general,57
+49,lifecycle,general,33
+50,granularly,general,4
 51,network ACL,term,
-52,compliance,general,57
-53,automate,general,56
-54,compute,general,56
+52,preinstall,general,5
+53,centralize,general,36
+54,multipart,general,4
 55,NAT gateway,term,
-56,usage,general,55
-57,operate,general,54
+56,programmatically,general,18
+57,retry,general,19
 58,internet gateway,term,12
-59,setting,general,54
-60,depend,general,54
-61,deliver,general,53
+59,noncompliant,general,4
+60,virtualize,general,4
+61,remediate,general,8
 62,route table,term,13
-63,refer,general,53
-64,generate,general,53
+63,routable,general,6
+64,hypervisor,general,5
 65,private subnet,term,4
-66,metric,general,52
-67,endpoint,general,52
-68,permission,general,52
+66,deduplication,general,6
+67,sophisticated,general,
+68,microservices,general,13
 69,public subnet,term,
-70,integration,general,52
-71,simplify,general,52
+70,prepopulate,general,4
+71,stateful,general,8
 72,VPC peering,term,
-73,connection,general,51
-74,developer,general,51
-75,database,general,50
+73,auditable,general,8
+74,asynchronously,general,10
+75,troubleshoot,general,30
 76,VPC endpoint,term,
-77,capacity,general,50
-78,deploy,general,50
+77,compute,general,56
+78,underlying,general,
 79,gateway endpoint,term,5
-80,software,general,49
-81,fail,general,49
+80,uncompress,general,4
+81,deprecate,general,9
 82,interface endpoint,term,
-83,detect,general,49
-84,function,general,48
-85,billing,general,48
+83,transcode,general,5
+84,restorable,general,4
+85,optimize,general,46
 86,transit gateway,term,
-87,modify,general,48
-88,identity,general,47
+87,atomicity,general,4
+88,datastore,general,
 89,site-to-site VPN,term,
-90,deployment,general,47
-91,client,general,47
-92,encryption,general,47
+90,resiliency,general,20
+91,performant,general,10
+92,granularity,general,10
 93,CIDR block,term,
-94,determine,general,47
-95,migrate,general,47
+94,snapshot,general,27
+95,replication,general,24
 96,elastic IP address,term,
-97,optimize,general,46
-98,virtual,general,46
-99,handle,general,46
+97,workflow,general,39
+98,pending,general,
+99,congested,general,
 100,bastion host,term,
-101,creation,general,46
-102,improve,general,45
+101,durably,general,5
+102,unmount,general,4
 103,operating system,term,25
-104,operational,general,45
-105,encrypt,general,45
-106,minimum,general,45
+104,latency,general,36
+105,checksum,general,7
+106,cryptographically,general,6
 107,instance type,term,24
-108,command,general,45
-109,contain,general,45
+108,query,general,41
+109,metric,general,52
 110,instance family,term,11
-111,relate,general,44
-112,enhance,general,44
-113,distribute,general,44
+111,authenticate,general,26
+112,dashboard,general,36
+113,guardrail,general,9
 114,Spot Instance,term,
-115,underlying,general,
-116,volume,general,43
+115,metadata,general,35
+116,millisecond,general,18
 117,On-Demand Instance,term,
-118,failure,general,43
-119,task,general,43
-120,host,general,43
+118,decrypt,general,17
+119,encryption,general,47
+120,schema,general,19
 121,Reserved Instance,term,7
-122,schedule,general,43
-123,maximum,general,43
+122,concurrency,general,9
+123,scalable,general,37
 124,dedicated host,term,
-125,fee,general,43
-126,transfer,general,42
-127,identify,general,42
+125,overwrite,general,8
+126,rollback,general,9
+127,stakeholder,general,5
 128,placement group,term,
-129,tier,general,42
-130,automatic,general,42
+129,remediation,general,11
+130,quota,general,29
 131,instance store,term,4
-132,bucket,general,41
-133,query,general,41
-134,launch,general,41
+132,validate,general,34
+133,standardize,general,14
+134,backend,general,20
 135,launch template,term,
-136,format,general,41
-137,attach,general,41
+136,deploy,general,50
+137,scalability,general,20
 138,scaling policy,term,4
-139,consistent,general,41
-140,eligible,general,41
-141,implement,general,40
+139,timestamp,general,16
+140,cluster,general,38
+141,authentication,general,34
 142,target tracking,term,
-143,device,general,40
-144,layer,general,40
+143,shard,general,8
+144,dataset,general,19
 145,scheduled scaling,term,
-146,object,general,39
-147,pattern,general,39
+146,optionally,general,30
+147,configuration,general,67
 148,horizontal scaling,term,
-149,on-premises,general,
-150,publish,general,39
-151,assign,general,39
+149,specify,general,62
+150,runtime,general,16
+151,bucket,general,41
 152,vertical scaling,term,
-153,visibility,general,39
-154,leverage,general,39
+153,asynchronous,general,15
+154,initialize,general,10
 155,scale out,term,
-156,cluster,general,38
-157,mode,general,38
-158,appropriate,general,38
+156,immutability,general,4
+157,interoperate,general,5
+158,subdomain,general,4
 159,scale in,term,
-160,desired,general,
-161,advanced,general,
+160,synchronously,general,8
+161,jitter,general,5
 162,health check,term,12
-163,compare,general,38
-164,parameter,general,38
-165,customize,general,38
+163,migrate,general,47
+164,reprocess,general,4
+165,cryptographic,general,10
 166,target group,term,4
-167,tag,general,37
-168,protocol,general,37
+167,replicate,general,36
+168,backfill,general,6
 169,sticky session,term,
-170,workflow,general,37
-171,destination,general,37
-172,scalable,general,37
+170,cache,general,28
+171,billable,general,9
+172,operationalize,general,4
 173,cross-zone load balancing,term,
-174,native,general,37
-175,latency,general,36
+174,compaction,general,5
+175,embed,general,14
 176,single point of failure,term,
-177,dashboard,general,36
-178,replicate,general,36
-179,mechanism,general,36
+177,deployment,general,47
+178,telemetry,general,13
+179,integrate,general,62
 180,loosely coupled,term,
-181,audit,general,36
-182,filter,general,36
+181,configurable,general,17
+182,resize,general,7
 183,tight coupling,term,
-184,regional,general,36
-185,centralize,general,36
-186,functionality,general,36
+184,billing,general,48
+185,orchestrate,general,10
+186,plaintext,general,4
 187,low latency,term,20
-188,flexibility,general,36
-189,execute,general,36
+188,queue,general,21
+189,synchronize,general,17
 190,high throughput,term,10
-191,architecture,general,35
-192,component,general,35
-193,verify,general,35
+191,decryption,general,11
+192,unify,general,20
+193,orchestration,general,10
 194,network bandwidth,term,10
-195,metadata,general,35
-196,analyze,general,35
+195,dependency,general,18
+196,debug,general,10
 197,data center,term,19
-198,analytics,general,35
-199,provider,general,35
-200,initiate,general,35
+198,proactively,general,8
+199,replica,general,16
+200,ciphertext,general,4
 201,edge location,term,8
-202,prevent,general,35
-203,occur,general,35
+202,generative,general,14
+203,prescriptive,general,5
 204,global infrastructure,term,7
-205,scenario,general,35
-206,unique,general,35
-207,manually,general,35
+205,availability,general,68
+206,customize,general,38
+207,egress,general,10
 208,content delivery network,term,
-209,stream,general,34
-210,validate,general,34
+209,ingestion,general,14
+210,uptime,general,21
 211,origin server,term,
-212,migration,general,34
-213,balance,general,34
+212,timeout,general,14
+213,prefix,general,15
 214,signed URL,term,
-215,authentication,general,34
-216,consume,general,34
-217,reference,general,34
+215,natively,general,20
+216,simplify,general,52
+217,actionable,general,12
 218,signed cookie,term,
-219,affect,general,34
-220,establish,general,33
+219,notification,general,35
+220,utilization,general,23
 221,presigned URL,term,
-222,lifecycle,general,33
-223,notification,general,33
-224,platform,general,33
+222,durability,general,26
+223,prioritization,general,4
+224,prioritize,general,18
 225,alias record,term,3
-226,extend,general,33
-227,compatible,general,33
+226,programmatic,general,6
+227,analytics,general,35
 228,routing policy,term,
-229,credential,general,32
-230,evaluate,general,32
-231,connectivity,general,32
+229,incur,general,27
+230,invoke,general,27
+231,analyze,general,35
 232,latency-based routing,term,
-233,maintenance,general,32
-234,retain,general,32
+233,verify,general,35
+234,on-premises,general,
 235,failover routing,term,
-236,advantage,general,32
-237,calculate,general,32
-238,replace,general,32
+236,one-time,general,
+237,connectivity,general,32
+238,dynamically,general,17
 239,weighted routing,term,
-240,accessible,general,32
-241,discover,general,32
+240,securely,general,31
+241,deletion,general,20
 242,geolocation routing,term,
-243,continuously,general,32
-244,container,general,31
-245,external,general,31
+243,optimization,general,30
+244,granular,general,20
+245,immutable,general,9
 246,domain name,term,9
-247,retrieve,general,31
-248,patch,general,31
+247,declarative,general,6
+248,offload,general,12
 249,object storage,term,8
-250,method,general,31
-251,aggregate,general,31
-252,capture,general,31
+250,namespace,general,11
+251,appliance,general,12
+252,statically,general,4
 253,block storage,term,7
-254,restrict,general,31
-255,securely,general,31
-256,file system,term,16
-257,combine,general,31
-258,vary,general,31
-259,regardless,general,31
+254,automation,general,22
+255,reroute,general,4
+256,file system,term,17
+257,invocation,general,10
+258,capability,general,63
+259,node,general,30
 260,storage class,term,10
-261,backup,general,30
-262,grant,general,30
+261,anomaly,general,16
+262,implement,general,40
 263,storage tier,term,6
-264,node,general,30
-265,optimization,general,30
-266,purchase,general,30
+264,virtualization,general,5
+265,whitelist,general,4
+266,allocate,general,22
 267,lifecycle policy,term,8
-268,dedicated,general,
-269,behavior,general,30
+268,standby,general,11
+269,distribute,general,44
 270,infrequent access,term,
-271,manual,general,30
-272,respond,general,30
-273,administrator,general,30
+271,relational,general,17
+272,throttle,general,15
+273,assign,general,39
 274,cold storage,term,
-275,path,general,30
-276,communicate,general,30
+275,frontend,general,6
+276,connector,general,13
 277,provisioned IOPS,term,
-278,trigger,general,30
-279,troubleshoot,general,30
+278,downtime,general,18
+279,transparently,general,12
 280,volume type,term,5
-281,optional,general,30
-282,optionally,general,30
-283,quota,general,29
+281,redeploy,general,4
+282,categorize,general,12
+283,repository,general,13
 284,durable storage,term,7
-285,hardware,general,29
-286,medium,general,29
+285,streamline,general,22
+286,repeatable,general,4
 287,data durability,term,11
-288,achieve,general,29
-289,enforce,general,29
-290,attribute,general,29
+288,container,general,31
+289,interactively,general,4
+290,retention,general,25
 291,versioning,term,
-292,accelerate,general,29
-293,internal,general,29
+292,parameter,general,38
+293,retrieve,general,31
 294,object lock,term,
-295,register,general,29
-296,isolate,general,29
-297,introduce,general,29
+295,attach,general,41
+296,modify,general,48
+297,authorize,general,22
 298,cross-Region replication,term,
-299,applicable,general,29
-300,correspond,general,29
+299,compress,general,18
+300,ingress,general,10
 301,access point,term,8
-302,eliminate,general,29
-303,cache,general,28
-304,detection,general,28
+302,aggregation,general,17
+303,recur,general,10
+304,escalation,general,4
 305,public access,term,8
-306,restore,general,28
-307,root,general,28
+306,visualize,general,19
+307,initiate,general,35
 308,server-side encryption,term,10
-309,subnet,general,28
-310,factor,general,28
-311,authorization,general,28
+309,interface,general,60
+310,bandwidth,general,21
+311,redact,general,4
 312,client-side encryption,term,7
-313,commitment,general,28
-314,disable,general,28
+313,stateless,general,4
+314,correlate,general,8
 315,encryption at rest,term,
-316,map,general,28
-317,complexity,general,28
-318,behalf,general,28
+316,ransomware,general,6
+317,upfront,general,27
+318,expose,general,20
 319,encryption in transit,term,
-320,suit,general,28
-321,snapshot,general,27
+320,transactional,general,10
+321,consolidate,general,24
 322,data at rest,term,
-323,alarm,general,27
-324,upload,general,27
-325,pipeline,general,27
+323,constraint,general,5
+324,identifier,general,15
+325,bottleneck,general,6
 326,data in transit,term,
-327,import,general,27
-328,minimize,general,27
+327,reachable,general,8
+328,template,general,23
 329,encryption key,term,21
-330,export,general,27
-331,core,general,27
-332,invoke,general,27
+330,minimize,general,27
+331,vector,general,9
+332,outbound,general,12
 333,envelope encryption,term,
-334,ideal,general,27
-335,incur,general,27
+334,accelerate,general,29
+335,compliance,general,57
 336,customer managed key,term,
-337,upfront,general,27
-338,cycle,general,27
-339,overhead,general,27
+337,disable,general,28
+338,tier,general,42
+339,resilience,general,12
 340,key rotation,term,4
-341,instruction,general,27
-342,display,general,27
+341,synchronous,general,8
+342,rebalance,general,4
 343,hardware security module,term,
-344,initial,general,27
-345,domain,general,26
+344,seamlessly,general,23
+345,validation,general,21
 346,private key,term,9
-347,delivery,general,26
-348,flow,general,26
-349,durability,general,26
+347,undifferentiated,general,8
+348,directory,general,20
+349,evaluate,general,32
 350,public key,term,9
-351,sensitive,general,26
-352,dynamic,general,26
+351,terminate,general,25
+352,partition,general,17
 353,key pair,term,6
-354,algorithm,general,26
-355,authenticate,general,26
-356,notify,general,26
+354,scan,general,24
+355,crawler,general,4
+356,visibility,general,39
 357,access key,term,5
-358,logic,general,26
-359,reliable,general,26
+358,permissive,general,4
+359,align,general,12
 360,least privilege,term,8
-361,recovery,general,25
-362,retention,general,25
-363,communication,general,25
+361,broker,general,7
+362,centrally,general,23
+363,interconnect,general,8
 364,IAM role,term,
-365,recommendation,general,25
-366,collect,general,25
+365,enhance,general,44
+366,unstructured,general,7
 367,trust policy,term,
-368,technical,general,25
-369,terminate,general,25
-370,transform,general,25
+368,upload,general,27
+369,redundancy,general,17
+370,developer,general,51
 371,permissions boundary,term,
-372,involve,general,25
-373,exceed,general,25
+372,modernize,general,6
+373,attribute,general,29
 374,service-linked role,term,
-375,estimate,general,25
-376,utilize,general,25
-377,script,general,25
+375,detect,general,49
+376,elasticity,general,9
+377,foundational,general,7
 378,identity-based policy,term,
-379,submit,general,25
-380,variety,general,25
+379,offsite,general,4
+380,audit,general,36
 381,resource-based policy,term,7
-382,represent,general,25
-383,replication,general,24
-384,scan,general,24
+382,functionality,general,36
+383,annotation,general,4
+384,expedite,general,6
 385,service control policy,term,
-386,continuous,general,24
-387,measure,general,24
+386,sandbox,general,4
+387,authorization,general,28
 388,session policy,term,5
-389,scope,general,24
-390,assume,general,24
-391,consolidate,general,24
+389,detection,general,28
+390,vulnerability,general,10
+391,manually,general,35
 392,temporary credentials,term,
-393,adjust,general,24
-394,switch,general,24
+393,embedding,general,5
+394,isolate,general,29
 395,root user,term,6
-396,navigate,general,24
-397,independently,general,24
-398,alert,general,23
+396,artifact,general,12
+397,provider,general,35
+398,bidirectional,general,4
 399,multi-factor authentication,term,5
-400,topic,general,23
-401,utilization,general,23
+400,mitigation,general,4
+401,propagate,general,10
 402,single sign-on,term,3
-403,template,general,23
-404,execution,general,23
-405,duration,general,23
+403,payload,general,14
+404,protocol,general,37
+405,customizable,general,14
 406,identity federation,term,
-407,comprehensive,general,23
-408,disk,general,23
+407,criterion,general,19
+408,expire,general,21
 409,identity provider,term,10
-410,frequency,general,23
-411,decide,general,23
+410,outage,general,9
+411,refine,general,9
 412,user pool,term,
-413,explore,general,23
-414,exclude,general,23
-415,centrally,general,23
+413,impair,general,5
+414,leverage,general,39
+415,correspond,general,29
 416,identity pool,term,
-417,broad,general,23
-418,convert,general,23
+417,compliant,general,16
+418,truncate,general,4
 419,role-based access,term,8
-420,percentage,general,23
-421,explicitly,general,23
-422,seamlessly,general,23
+420,token,general,14
+421,pipeline,general,27
+422,topology,general,10
 423,fine-grained access control,term,
-424,strategy,general,22
-425,automation,general,22
+424,unused,general,10
+425,guideline,general,11
 426,cross-account access,term,8
-427,develop,general,22
-428,session,general,22
-429,allocation,general,22
+427,migration,general,34
+428,proactive,general,9
+429,unintended,general,8
 430,management account,term,11
-431,recover,general,22
-432,authorize,general,22
+431,normalize,general,7
+432,increment,general,12
 433,member account,term,10
-434,allocate,general,22
-435,payment,general,22
-436,selection,general,22
+434,inference,general,12
+435,fallback,general,4
+436,unreachable,general,6
 437,organizational unit,term,6
-438,periodically,general,22
-439,input,general,22
+438,publish,general,39
+439,populate,general,10
 440,delegated administrator,term,7
-441,programming,general,22
-442,interact,general,22
-443,streamline,general,22
+441,rotate,general,13
+442,detach,general,7
+443,consume,general,34
 444,consolidated billing,term,9
-445,govern,general,22
-446,transport,general,22
+445,allocation,general,22
+446,backlog,general,4
 447,payer account,term,7
-448,locate,general,22
-449,logical,general,22
-450,compatibility,general,22
+448,visualization,general,15
+449,ephemeral,general,6
+450,tenancy,general,4
 451,shared responsibility model,term,
-452,parallel,general,22
-453,commit,general,22
+452,evolve,general,16
+453,deprecation,general,4
 454,compliance requirement,term,18
-455,guarantee,general,22
-456,similarly,general,22
-457,queue,general,21
+455,resilient,general,12
+456,rename,general,7
+457,inbound,general,14
 458,regulatory requirement,term,7
-459,bandwidth,general,21
-460,validation,general,21
+459,enforce,general,29
+460,notify,general,26
 461,data residency,term,7
-462,rely,general,21
-463,context,general,21
-464,expire,general,21
+462,tamper,general,6
+463,designate,general,20
+464,reservation,general,12
 465,audit log,term,9
-466,combination,general,21
-467,preserve,general,21
+466,calculate,general,32
+467,restore,general,28
 468,audit trail,term,4
-469,progress,general,21
-470,unavailable,general,21
-471,definition,general,21
+469,periodically,general,22
+470,subscriber,general,6
+471,activate,general,19
 472,access log,term,6
-473,predictable,general,21
-474,ongoing,general,21
+473,append,general,5
+474,reliability,general,15
 475,unauthorized access,term,12
-476,expand,general,21
-477,intend,general,21
+476,optimally,general,6
+477,revoke,general,13
 478,security posture,term,12
-479,uptime,general,21
-480,efficiently,general,21
-481,separately,general,21
+479,restrict,general,31
+480,import,general,27
+481,emit,general,16
 482,threat intelligence,term,5
-483,unlike,general,21
-484,expose,general,20
+483,modernization,general,5
+484,localize,general,4
 485,DDoS attack,term,
-486,directory,general,20
-487,distribution,general,20
-488,governance,general,20
+486,recommendation,general,25
+487,revocation,general,5
+488,expiration,general,13
 489,web ACL,term,
-490,fault,general,20
-491,resiliency,general,20
+490,incremental,general,14
+491,posture,general,16
 492,rate-based rule,term,
-493,isolation,general,20
-494,remote,general,20
-495,deletion,general,20
+493,aggregate,general,31
+494,cost-optimized,general,
+495,concurrent,general,19
 496,SQL injection,term,
-497,backend,general,20
-498,describe,general,20
+497,simulate,general,4
+498,infrequently,general,8
 499,cross-site scripting,term,
-500,discovery,general,20
-501,scalability,general,20
-502,granular,general,20
+500,duplicate,general,16
+501,organizational,general,12
+502,constrain,general,4
 503,security patch,term,9
-504,mapping,general,20
-505,minimal,general,20
+504,redirect,general,9
+505,static,general,16
 506,sensitive data,term,17
-507,designate,general,20
-508,reflect,general,20
-509,consist,general,20
+507,redundant,general,14
+508,maximize,general,15
+509,personalize,general,5
 510,data protection,term,15
-511,fine-grained,general,
-512,versus,general,20
+511,reconfigure,general,5
+512,sender,general,6
 513,data integrity,term,5
-514,natively,general,20
-515,implementation,general,19
-516,schema,general,19
+514,baseline,general,16
+515,rack,general,7
+516,onboard,general,19
 517,relational database,term,7
-518,retry,general,19
-519,temporary,general,19
+518,unavailable,general,21
+519,predictability,general,4
 520,primary instance,term,6
-521,consistency,general,19
-522,dataset,general,19
-523,computing,general,19
+521,utilize,general,25
+522,precede,general,4
+523,depend,general,54
 524,standby replica,term,
-525,activate,general,19
-526,transformation,general,19
+525,agility,general,6
+526,reuse,general,15
 527,Multi-AZ deployment,term,
-528,unify,general,19
-529,variable,general,19
-530,interactive,general,19
+528,flexibility,general,37
+529,continually,general,11
+530,buffer,general,13
 531,automated backup,term,7
-532,visualize,general,19
-533,extension,general,19
+532,compatibility,general,22
+533,innovate,general,4
 534,manual snapshot,term,6
-535,criterion,general,19
-536,decrease,general,19
-537,completion,general,19
+535,preventative,general,5
+536,disruption,general,15
+537,derive,general,13
 538,point-in-time recovery,term,7
-539,onboard,general,19
-540,pair,general,19
+539,escalate,general,4
+540,sequential,general,5
 541,backup window,term,5
-542,concurrent,general,19
-543,globally,general,19
+542,governance,general,20
+543,exceed,general,25
 544,maintenance window,term,16
-545,dependency,general,18
-546,relevant,general,18
-547,license,general,18
+545,authoritative,general,7
+546,enrich,general,10
+547,interruption,general,12
 548,backup plan,term,8
-549,prioritize,general,18
-550,transaction,general,18
+549,administrator,general,30
+550,periodic,general,14
 551,retention period,term,17
-552,characteristic,general,18
-553,integrity,general,18
-554,regulatory,general,18
+552,seamless,general,18
+553,archival,general,8
+554,efficiently,general,22
 555,retention policy,term,11
-556,hybrid,general,18
-557,boundary,general,18
+556,consistency,general,19
+557,synchronization,general,8
 558,recovery point objective,term,
-559,engineer,general,18
-560,optimal,general,18
-561,server-side,general,18
+559,encode,general,6
+560,degradation,general,4
+561,logically,general,7
 562,recovery time objective,term,
-563,intelligence,general,18
-564,obtain,general,18
+563,classify,general,8
+564,govern,general,22
 565,backup and restore,term,
-566,downtime,general,18
-567,vendor,general,18
-568,consumption,general,18
+566,patch,general,31
+567,persist,general,11
+568,degrade,general,6
 569,pilot light,term,
-570,millisecond,general,18
-571,historical,general,18
+570,payer,general,7
+571,compatible,general,33
 572,warm standby,term,3
-573,programmatically,general,18
-574,accord,general,18
-575,compress,general,18
+573,navigate,general,24
+574,inline,general,10
+575,benchmark,general,7
 576,multi-site active-active,term,
-577,partial,general,18
-578,premise,general,18
+577,deactivate,general,5
+578,execute,general,36
 579,automatic failover,term,5
-580,coordinate,general,18
-581,suitable,general,18
-582,prefer,general,18
+580,subscribe,general,15
+581,continual,general,6
+582,exclude,general,23
 583,strong consistency,term,7
-584,modification,general,18
-585,confirm,general,18
+584,revert,general,8
+585,processor,general,13
 586,eventual consistency,term,
-587,seamless,general,18
-588,guidance,general,17
-589,improvement,general,17
+587,continuously,general,32
+588,delegate,general,14
+589,traverse,general,10
 590,partition key,term,5
-591,regularly,general,17
-592,partition,general,17
+591,subset,general,13
+592,restart,general,13
 593,sort key,term,
-594,threshold,general,17
-595,driver,general,17
-596,peer,general,17
+594,isolation,general,20
+595,vendor,general,18
+596,corrective,general,5
 597,global table,term,
-598,conduct,general,17
-599,decrypt,general,17
+598,extensible,general,4
+599,threshold,general,17
 600,capacity unit,term,7
-601,indicate,general,17
-602,relational,general,17
-603,aggregation,general,17
+601,accrue,general,5
+602,lookup,general,4
+603,refresh,general,15
 604,provisioned capacity,term,6
-605,dynamically,general,17
-606,redundancy,general,17
+605,searchable,general,4
+606,predictable,general,21
 607,on-demand capacity,term,
-608,spike,general,17
-609,correct,general,17
+608,transform,general,25
+609,advertise,general,10
 610,key-value pair,term,5
-611,roll,general,17
-612,deny,general,17
-613,valid,general,17
+611,malicious,general,9
+612,characteristic,general,18
+613,incorporate,general,12
 614,in-memory cache,term,
-615,exception,general,17
-616,prompt,general,17
+615,summarize,general,7
+616,listener,general,6
 617,cache hit,term,
-618,produce,general,17
-619,incoming,general,17
-620,synchronize,general,17
+618,optional,general,30
+619,retain,general,32
+620,concurrently,general,10
 621,time to live,term,
-622,comply,general,17
-623,subsequent,general,17
+622,interoperability,general,5
+623,computing,general,19
 624,lazy loading,term,
-625,limitation,general,17
-626,unlimited,general,17
-627,effectively,general,17
+625,grouping,general,10
+626,specialized,general,
+627,inventory,general,14
 628,write-through cache,term,
-629,replica,general,16
-630,edge,general,16
+629,pinpoint,general,6
+630,scenario,general,35
 631,connection pooling,term,
-632,static,general,16
-633,index,general,16
-634,anomaly,general,16
+632,inadvertently,general,
+633,packet,general,13
+634,disk,general,23
 635,data warehouse,term,8
-636,ownership,general,16
-637,pool,general,16
+636,idle,general,11
+637,algorithm,general,26
 638,data lake,term,14
-639,runtime,general,16
-640,evolve,general,16
-641,privilege,general,16
+639,customization,general,10
+640,reliably,general,11
+641,unblock,general,4
 642,data catalog,term,3
-643,output,general,16
-644,assess,general,16
+643,interval,general,16
+644,contextual,general,9
 645,columnar storage,term,
-646,unauthorized,general,
-647,baseline,general,16
-648,posture,general,16
+646,curate,general,6
+647,pod,general,10
+648,viewer,general,4
 649,big data,term,11
-650,handling,general,16
-651,purpose-built,general,
+650,downstream,general,11
+651,selectively,general,11
 652,batch processing,term,
-653,resolve,general,16
-654,client-side,general,16
-655,duplicate,general,16
+653,overhead,general,27
+654,inaccessible,general,6
+655,communicate,general,30
 656,stream processing,term,
-657,compliant,general,16
-658,interval,general,16
+657,optimal,general,18
+658,stack,general,14
 659,streaming data,term,9
-660,observe,general,16
-661,timestamp,general,16
-662,locally,general,16
+660,portability,general,4
+661,subscription,general,13
+662,inform,general,14
 663,data stream,term,9
-664,sync,general,16
-665,alternative,general,16
+664,cryptography,general,4
+665,indexing,general,6
 666,data pipeline,term,9
-667,administrative,general,16
-668,extract,general,16
-669,visible,general,16
+667,tailor,general,13
+668,organize,general,14
+669,parse,general,7
 670,data ingestion,term,6
-671,qualify,general,16
-672,opt,general,16
+671,specification,general,15
+672,renew,general,7
 673,data transformation,term,10
-674,simultaneously,general,16
-675,virtually,general,16
+674,verification,general,8
+675,reside,general,15
 676,near real-time,term,17
-677,emit,general,16
-678,restriction,general,16
-679,exact,general,16
+677,graph,general,12
+678,assess,general,16
+679,accessible,general,32
 680,business intelligence,term,8
-681,commonly,general,16
-682,differ,general,16
+681,invoice,general,4
+682,prerequisite,general,9
 683,anomaly detection,term,8
-684,certification,general,16
-685,cost-effective,general,16
-686,efficiency,general,16
+684,intelligently,general,5
+685,disconnect,general,8
+686,inspect,general,12
 687,machine learning,term,
-688,flag,general,16
-689,configurable,general,16
+688,warehouse,general,10
+689,footprint,general,6
 690,natural language,term,11
-691,familiar,general,16
-692,efficient,general,16
-693,threat,general,15
+691,adjust,general,24
+692,duration,general,23
+693,modification,general,19
 694,message queue,term,4
-695,procedure,general,15
-696,disaster,general,15
+695,compression,general,13
+696,peer,general,17
 697,dead-letter queue,term,
-698,responsibility,general,15
-699,reliability,general,15
-700,throttle,general,15
+698,alignment,general,6
+699,cipher,general,4
+700,complexity,general,28
 701,visibility timeout,term,
-702,subscribe,general,15
-703,transition,general,15
+702,manifest,general,8
+703,empower,general,7
 704,long polling,term,
-705,asynchronous,general,15
-706,disruption,general,15
-707,maximize,general,15
+705,diagnose,general,9
+706,similarity,general,6
+707,regression,general,4
 708,fan-out,term,
-709,dimension,general,15
-710,immediate,general,15
+709,unhealthy,general,13
+710,forecast,general,10
 711,publish-subscribe,term,
-712,concept,general,15
-713,overview,general,15
-714,aspect,general,15
-715,event notification,term,7
-716,entity,general,15
-717,persistent,general,15
+712,normalization,general,5
+713,elevate,general,4
+714,applicable,general,29
+715,event notification,term,8
+716,horizontally,general,6
+717,tenant,general,6
 718,event-driven architecture,term,4
-719,refresh,general,15
-720,intervention,general,15
-721,entry,general,15
+719,coordinate,general,18
+720,adopt,general,9
+721,proportionally,general,4
 722,decoupled architecture,term,
-723,preference,general,15
-724,delay,general,15
+723,interrupt,general,11
+724,originate,general,10
 725,serverless compute,term,8
-726,cancel,general,15
-727,element,general,15
-728,segment,general,15
+726,architectural,general,8
+727,prompt,general,17
+728,hybrid,general,18
 729,cold start,term,
-730,portion,general,15
-731,visualization,general,15
+730,indicator,general,7
+731,geographically,general,5
 732,provisioned concurrency,term,
-733,actively,general,15
-734,accurate,general,15
-735,reside,general,15
+733,encoding,general,4
+734,recreate,general,6
+735,sync,general,16
 736,reserved concurrency,term,
-737,reuse,general,15
-738,opt-in,general,15
+737,dimension,general,15
+738,spike,general,17
 739,containerized application,term,8
-740,alongside,general,15
-741,contrast,general,15
+740,holistic,general,5
+741,interactive,general,19
 742,container image,term,7
-743,objective,general,14
-744,token,general,14
-745,inventory,general,14
+743,combine,general,31
+744,semantics,general,8
+745,standalone,general,9
 746,task definition,term,6
-747,inform,general,14
-748,prefix,general,14
+747,inconsistency,general,5
+748,trace,general,10
 749,microservices architecture,term,
-750,timeout,general,14
-751,stack,general,14
-752,organize,general,14
+750,locate,general,22
+751,privilege,general,16
+752,sensitivity,general,5
 753,control plane,term,7
-754,embed,general,14
-755,ingestion,general,14
+754,statistic,general,9
+755,variable,general,19
 756,data plane,term,3
-757,standardize,general,14
-758,redundant,general,14
-759,delegate,general,14
+757,classification,general,5
+758,executable,general,4
+759,latency-sensitive,general,7
 760,infrastructure as code,term,
-761,payload,general,14
-762,periodic,general,14
+761,compose,general,8
+762,mesh,general,7
 763,change set,term,
-764,dive,general,14
-765,publicly,general,14
-766,burst,general,14
+764,roadmap,general,5
+765,globally,general,19
+766,mapping,general,20
 767,configuration drift,term,
-768,generative,general,14
-769,incremental,general,14
-770,configuration change,term,12
-771,description,general,14
-772,specification,general,14
-773,suite,general,14
+768,collaborate,general,6
+769,persistent,general,15
+770,configuration change,term,13
+771,boundary,general,18
+772,unsupported,general,5
+773,checkpoint,general,9
 774,blue/green deployment,term,
-775,inbound,general,14
-776,serving,general,14
+775,simulation,general,9
+776,interact,general,22
 777,rolling deployment,term,
-778,treat,general,14
-779,intelligent,general,14
-780,comparison,general,14
+778,high-throughput,general,4
+779,adhere,general,6
+780,firmware,general,5
 781,canary release,term,
-782,specifically,general,14
-783,arrive,general,14
+782,deterministic,general,4
+783,excellence,general,4
 784,continuous integration,term,6
-785,customizable,general,14
-786,respectively,general,14
-787,specialized,general,
+785,appropriately,general,10
+786,rotation,general,9
+787,drift,general,5
 788,version control,term,5
-789,certificate,general,13
-790,observability,general,13
+789,rewrite,general,10
+790,inherit,general,10
 791,source code,term,6
-792,prepare,general,13
-793,connector,general,13
-794,repository,general,13
+792,override,general,8
+793,geographic,general,13
+794,correlation,general,7
 795,user data,term,5
-796,subscription,general,13
-797,telemetry,general,13
+796,limitation,general,17
+797,certification,general,18
 798,instance metadata,term,
-799,processor,general,13
-800,rotate,general,13
-801,trend,general,13
+799,reusable,general,5
+800,renewal,general,6
+801,explicitly,general,23
 802,service quota,term,6
-803,microservices,general,13
-804,interaction,general,13
+803,severity,general,6
+804,attachment,general,6
 805,service limit,term,11
-806,technique,general,13
-807,compromise,general,13
+806,anticipate,general,6
+807,conditional,general,9
 808,limit increase,term,10
-809,packet,general,13
-810,manner,general,13
-811,restart,general,13
+809,incoming,general,17
+810,sequentially,general,4
+811,restriction,general,16
 812,rate limit,term,8
-813,expiration,general,13
-814,geographic,general,13
+813,suffix,general,4
+814,comprise,general,12
 815,request rate,term,7
-816,registration,general,13
-817,compression,general,13
-818,assessment,general,13
+816,timely,general,5
+817,residency,general,7
+818,deviation,general,4
 819,throttling,term,
-820,derive,general,13
-821,resume,general,13
+820,workforce,general,4
+821,accidental,general,7
 822,free tier,term,20
-823,facilitate,general,13
-824,construct,general,13
-825,subset,general,13
+823,enrichment,general,6
+824,regionally,general,5
+825,placement,general,6
 826,pricing model,term,10
-827,unhealthy,general,13
-828,operator,general,13
+827,safeguard,general,12
+828,preserve,general,21
 829,upfront payment,term,6
-830,self-managed,general,
-831,tune,general,13
-832,tailor,general,13
+830,termination,general,7
+831,instruction,general,27
+832,resolve,general,16
 833,hourly rate,term,8
-834,revoke,general,13
-835,strongly,general,13
+834,overlap,general,6
+835,confidentiality,general,6
 836,billing cycle,term,21
-837,corporate,general,13
-838,summary,general,13
-839,user-defined,general,
+837,inactive,general,9
+838,administer,general,8
+839,analytic,general,7
 840,cost allocation tag,term,
-841,distinct,general,13
-842,identifier,general,13
+841,fault-tolerant,general,8
+842,multi-tenant,general,7
 843,cost optimization,term,14
-844,one-time,general,
-845,respective,general,13
-846,transmit,general,13
+844,perimeter,general,4
+845,spoof,general,5
+846,eliminate,general,29
 847,cost savings,term,15
-848,belong,general,13
-849,length,general,13
+848,syntax,general,9
+849,transmit,general,13
 850,operational overhead,term,13
-851,tolerance,general,13
-852,approximately,general,13
-853,conflict,general,13
+851,accessibility,general,5
+852,independently,general,24
+853,consist,general,20
 854,operational burden,term,8
-855,reservation,general,12
-856,consumer,general,12
+855,decrease,general,19
+856,suspend,general,10
 857,manual intervention,term,8
-858,align,general,12
-859,resilience,general,12
-860,appliance,general,12
+858,complement,general,12
+859,convert,general,23
+860,propagation,general,8
 861,on-premises environment,term,10
-862,organizational,general,12
-863,graph,general,12
+862,unaffected,general,5
+863,indefinitely,general,10
 864,hybrid cloud,term,
-865,worker,general,12
-866,engineering,general,12
-867,incorporate,general,12
+865,withstand,general,5
+866,contractual,general,5
+867,observe,general,16
 868,private connectivity,term,10
-869,secondary,general,12
-870,actionable,general,12
+869,circumstance,general,10
+870,disrupt,general,11
 871,network connection,term,21
-872,artifact,general,12
-873,resilient,general,12
+872,deviate,general,5
+873,overview,general,15
 874,network interface,term,19
-875,shift,general,12
-876,sequence,general,12
-877,buffer,general,12
+875,hierarchy,general,4
+876,dive,general,14
+877,enhancement,general,12
 878,elastic network interface,term,
-879,approve,general,12
-880,inference,general,12
+879,hash,general,11
+880,facilitate,general,13
 881,virtual interface,term,5
-882,categorize,general,12
-883,chain,general,12
-884,inspect,general,12
+882,construct,general,13
+883,compile,general,4
+884,infer,general,4
 885,peering connection,term,5
-886,outbound,general,12
-887,pending,general,
+886,opt,general,16
+887,compromise,general,13
 888,network topology,term,7
-889,potentially,general,12
-890,interruption,general,12
-891,consult,general,12
-892,network traffic,term,16
-893,equal,general,12
-894,rapidly,general,12
-895,traffic pattern,term,8
-896,complement,general,12
-897,unlikely,general,12
-898,spin,general,12
-899,incoming traffic,term,7
-900,primarily,general,12
-901,prorate,general,12
+889,extract,general,16
+890,iteration,general,4
+891,logical,general,22
+892,network traffic,term,18
+893,consult,general,12
+894,fetch,general,8
+895,traffic pattern,term,9
+896,calculation,general,11
+897,semantic,general,4
+898,unpredictable,general,10
+899,incoming traffic,term,8
+900,bastion,general,4
+901,portal,general,7
 902,public internet,term,15
-903,prove,general,12
-904,binary,general,12
-905,sophisticated,general,
+903,discontinue,general,5
+904,exhaustion,general,4
+905,locally,general,16
 906,private network,term,12
-907,comprise,general,12
-908,strict,general,12
+907,implication,general,5
+908,approve,general,12
 909,web server,term,14
-910,transparently,general,12
-911,individually,general,12
-912,succeed,general,12
+910,intend,general,21
+911,instrumentation,general,4
+912,entity,general,15
 913,third party,term,16
-914,increment,general,12
-915,enhancement,general,12
+914,opt-in,general,15
+915,reboot,general,4
 916,open source,term,22
-917,safeguard,general,12
-918,conjunction,general,12
-919,span,general,12
+917,analyst,general,6
+918,assurance,general,8
+919,preference,general,15
 920,end user,term,24
-921,origin,general,11
-922,discount,general,11
+921,fine-grained,general,
+922,computation,general,7
 923,service level agreement,term,
-924,remediation,general,11
-925,standby,general,11
-926,continually,general,11
+924,effectiveness,general,5
+925,minimal,general,20
+926,attribute-based,general,
 927,single-digit millisecond,term,7
-928,permit,general,11
-929,lifetime,general,11
+928,comply,general,17
+929,differ,general,17
 930,performance metric,term,11
-931,consistently,general,11
-932,idle,general,11
-933,persist,general,11
+931,accommodate,general,5
+932,irrespective,general,7
+933,outline,general,5
 934,custom metric,term,9
-935,containerized,general,
-936,guideline,general,11
+935,tightly,general,5
+936,identifiable,general,6
 937,underlying infrastructure,term,15
-938,timeline,general,11
-939,downstream,general,11
+938,transient,general,4
+939,burst,general,14
 940,production workload,term,8
-941,rapid,general,11
-942,visual,general,11
-943,typical,general,11
+941,injection,general,6
+942,differentiate,general,9
+943,canonical,general,6
 944,development environment,term,15
-945,burden,general,11
-946,decryption,general,11
+945,stringent,general,4
+946,render,general,6
 947,distributed application,term,11
-948,raw,general,11
-949,prebuilt,general,
-950,preview,general,11
+948,authenticity,general,7
+949,startup,general,11
+950,partial,general,18
 951,access pattern,term,10
-952,ease,general,11
-953,interrupt,general,11
+952,continuity,general,6
+953,module,general,8
 954,lifecycle management,term,12
-955,privately,general,11
-956,initially,general,11
-957,replacement,general,11
+955,resume,general,13
+956,preview,general,11
+957,fulfill,general,6
 958,data source,term,15
-959,robust,general,11
-960,reliably,general,11
+959,plugin,general,4
+960,bypass,general,9
 961,data set,term,15
-962,scheme,general,11
-963,calculation,general,11
-964,duty,general,11
+962,graphical,general,7
+963,satisfy,general,9
+964,discrete,general,5
 965,historical data,term,9
-966,startup,general,11
-967,significantly,general,11
+966,eligibility,general,9
+967,separately,general,21
 968,data loss,term,13
-969,whereas,general,11
-970,background,general,11
-971,behave,general,11
+969,blueprint,general,4
+970,inspection,general,6
+971,accordingly,general,10
 972,accidental deletion,term,6
-973,selectively,general,11
-974,solve,general,11
+973,inexpensive,general,6
+974,conform,general,10
 975,business continuity,term,6
-976,transmission,general,11
-977,hash,general,11
-978,namespace,general,11
-979,unique identifier,term,6
-980,disrupt,general,11
-981,offload,general,11
+976,caller,general,8
+977,clone,general,7
+978,visually,general,5
+979,unique identifier,term,7
+980,cancel,general,15
+981,uniquely,general,6
 982,plain text,term,5
-983,translation,general,11
-984,preconfigured,general,
-985,sufficient,general,11
+983,robust,general,11
+984,intermittent,general,5
+985,handler,general,4
 986,business logic,term,5
-987,incident,general,10
-988,outcome,general,10
+987,digitally,general,4
+988,enroll,general,4
 989,corrective action,term,5
-990,vulnerability,general,10
-991,plane,general,10
-992,priority,general,10
+990,lightweight,general,9
+991,exploit,general,6
+992,ad-hoc,general,7
 993,actionable insight,term,5
-994,trace,general,10
-995,unused,general,10
+994,interpret,general,6
+995,proportional,general,4
 996,building block,term,7
-997,warehouse,general,10
-998,principal,general,10
-999,forecast,general,10
+997,timeline,general,11
+998,employ,general,10
+999,identification,general,7
 1000,response time,term,7

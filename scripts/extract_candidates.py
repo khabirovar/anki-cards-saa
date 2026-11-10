@@ -15,7 +15,7 @@ from pathlib import Path
 import simplemma
 from wordfreq import top_n_list, zipf_frequency
 
-from wordlib import count_bigrams, count_words, drop_boilerplate, html_to_text
+from wordlib import count_bigrams, count_words, drop_boilerplate, html_to_text, keyness
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = ROOT / "data" / "source"
@@ -64,13 +64,18 @@ def write_csv(path: Path, header: list[str], rows: list[list]) -> None:
 def main() -> None:
     docs = read_sources()
 
+    counts = count_words(docs, lemmatize)
+    total = sum(row["count"] for row in counts.values())
     words = []
-    for lemma, row in count_words(docs, lemmatize).items():
+    for lemma, row in counts.items():
         zipf = zipf_frequency(lemma, "en")
         if row["count"] >= MIN_WORD_COUNT and zipf <= MAX_ZIPF and row["cap_ratio"] < MAX_CAP_RATIO:
-            words.append([lemma, row["count"], row["docs"], round(zipf, 2), round(row["cap_ratio"], 2)])
-    words.sort(key=lambda r: (-r[2], -r[1], r[0]))
-    write_csv(WORDS_CSV, ["lemma", "count", "docs", "zipf", "cap_ratio"], words)
+            score = keyness(row["count"], total, zipf)
+            words.append([lemma, row["count"], row["docs"], round(zipf, 2), round(row["cap_ratio"], 2), round(score, 3)])
+    # Most AWS-specific first: the goal is the vocabulary of the exam domain,
+    # not words that are merely frequent in any business text.
+    words.sort(key=lambda r: (-r[5], r[0]))
+    write_csv(WORDS_CSV, ["lemma", "count", "docs", "zipf", "cap_ratio", "keyness"], words)
 
     terms = [
         [term, row["count"], row["docs"]]

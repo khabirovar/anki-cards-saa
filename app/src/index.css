@@ -139,6 +139,17 @@ button {
   color: #06201c;
 }
 
+.study-easy {
+  align-self: center;
+  background: none;
+  border: none;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .study-summary {
   justify-content: center;
   gap: 16px;
