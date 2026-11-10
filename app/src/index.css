@@ -55,12 +55,33 @@ button {
 }
 
 .home-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   background: var(--bg-panel);
   border: 1px solid var(--hairline);
   border-radius: 16px;
   font-size: 1.15rem;
-  padding: 24px;
+  padding: 22px 16px;
   text-align: center;
+}
+
+.home-stats {
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+}
+
+.home-reset {
+  align-self: center;
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  padding: 8px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .home-button:active:not(:disabled) {
@@ -88,6 +109,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
 }
 
 .study-hint {
@@ -105,6 +127,27 @@ button {
   font-size: 1.1rem;
   font-weight: 600;
   padding: 16px;
+}
+
+.study-button-unknown {
+  background: var(--bg-raised);
+  color: var(--ink);
+}
+
+.study-button-known {
+  background: var(--teal);
+  color: #06201c;
+}
+
+.study-summary {
+  justify-content: center;
+  gap: 16px;
+}
+
+.summary-line {
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: 1.05rem;
 }
 
 /* Flip card */

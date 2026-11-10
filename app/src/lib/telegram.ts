@@ -18,12 +18,9 @@ interface TelegramWebApp {
     notificationOccurred(type: "error" | "success" | "warning"): void;
     selectionChanged(): void;
   };
-  CloudStorage?: {
-    setItem(key: string, value: string, cb?: (err: unknown, ok: boolean) => void): void;
-    getItem(key: string, cb: (err: unknown, value: string) => void): void;
-    getItems(keys: string[], cb: (err: unknown, values: Record<string, string>) => void): void;
-    removeItems(keys: string[], cb?: (err: unknown, ok: boolean) => void): void;
-  };
+  CloudStorage?: CloudStorageLike;
+  isVersionAtLeast?(version: string): boolean;
+  showConfirm?(message: string, cb: (confirmed: boolean) => void): void;
 }
 
 declare global {
@@ -33,6 +30,7 @@ declare global {
 }
 
 import { THEME_BACKGROUND, THEME_HEADER } from "./theme";
+import type { CloudStorageLike } from "./cloudProgress";
 
 // A function, not a value read once at module load: telegram-web-app.js is
 // loaded via a plain blocking <script> tag with no error handling, so on a
@@ -66,4 +64,21 @@ export function initTelegram(): void {
   // tint Telegram's own chrome to match so the native header doesn't clash.
   safeTg((w) => w.setHeaderColor?.(THEME_HEADER));
   safeTg((w) => w.setBackgroundColor?.(THEME_BACKGROUND));
+}
+
+// Telegram's native dialog where supported (Bot API 6.2+); window.confirm is
+// unreliable inside some Telegram webviews.
+export function confirmAction(message: string): Promise<boolean> {
+  const tg = getTg();
+  return new Promise((resolve) => {
+    try {
+      if (tg?.showConfirm && tg.isVersionAtLeast?.("6.2")) {
+        tg.showConfirm(message, resolve);
+        return;
+      }
+    } catch {
+      // unsupported on this client — fall through to the browser dialog
+    }
+    resolve(window.confirm(message));
+  });
 }
